@@ -34,7 +34,7 @@ jobs:
           if ([string]::IsNullOrWhiteSpace($version) -or $version -eq 'main' -or $version -eq 'master') {
             $version = "1.0.0"
           }
-          $zipName = "pmadd-UnlimitedUpgrades-$version.zip"
+          $zipName = "pmadd-Unlimited_Upgrades-$version.zip"
           
           New-Item -ItemType Directory -Path staging -Force | Out-Null
           Copy-Item src/bin/AllUpgradesMod.dll -Destination staging/ -Force
