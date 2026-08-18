@@ -4,11 +4,15 @@
 *.user
 *.suo
 
-# Staging & Release zips (generated)
-staging/
+# Binary and package outputs
 *.zip
+*.dll
+*.pdb
+staging/
+dist/
+libs/
 
-# OS / Editor files
+# OS / Editor metadata
 .DS_Store
 Thumbs.db
 .vs/

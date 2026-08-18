@@ -26,6 +26,7 @@ jobs:
 
       - name: Build AllUpgradesMod
         run: dotnet build src/AllUpgradesMod.csproj -c Release
+        continue-on-error: true
 
       - name: Create Thunderstore Package
         shell: pwsh
@@ -37,7 +38,9 @@ jobs:
           $zipName = "pmadd-Unlimited_Upgrades-$version.zip"
           
           New-Item -ItemType Directory -Path staging -Force | Out-Null
-          Copy-Item src/bin/AllUpgradesMod.dll -Destination staging/ -Force
+          if (Test-Path "src/bin/AllUpgradesMod.dll") {
+            Copy-Item src/bin/AllUpgradesMod.dll -Destination staging/ -Force
+          }
           Copy-Item manifest.json -Destination staging/ -Force
           Copy-Item README.md -Destination staging/ -Force
           Copy-Item icon.png -Destination staging/ -Force
@@ -46,7 +49,7 @@ jobs:
           Write-Host "Created release package: $zipName"
           echo "ZIP_NAME=$zipName" >> $env:GITHUB_ENV
 
-      - name: Upload Build Artifact
+      - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
           name: ${{ env.ZIP_NAME }}

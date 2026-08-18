@@ -5,14 +5,14 @@ using UnityEngine;
 
 namespace AllUpgradesMod
 {
-    [BepInPlugin("com.pmadd.unlimitedupgrades", "Unlimited Upgrades Mod", "1.0.0")]
+    [BepInPlugin("com.pmadd.unlimitedupgrades", "Unlimited Upgrades", "1.0.0")]
     public class UnlimitedUpgradesPlugin : BaseUnityPlugin
     {
         private void Awake()
         {
             var harmony = new Harmony("com.pmadd.unlimitedupgrades");
             harmony.PatchAll();
-            Logger.LogInfo("Unlimited Upgrades Mod loaded successfully!");
+            Logger.LogInfo("Unlimited Upgrades loaded successfully!");
         }
     }
 

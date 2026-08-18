@@ -6,28 +6,34 @@
     <Version>1.0.0</Version>
     <OutputPath>bin\</OutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <!-- Path to House of the Dying Sun installation -->
+    <HOTDS_GAME_PATH Condition="'$(HOTDS_GAME_PATH)' == ''">C:\Program Files (x86)\Steam\steamapps\common\DyingSun</HOTDS_GAME_PATH>
+    <!-- Path to BepInEx core -->
+    <BEPINEX_CORE_PATH Condition="'$(BEPINEX_CORE_PATH)' == ''">$(APPDATA)\r2modmanPlus-local\HOTDS\profiles\Modded\BepInEx\core</BEPINEX_CORE_PATH>
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- Relative repository lib references -->
+    <!-- Game Managed DLLs -->
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\libs\Assembly-CSharp.dll</HintPath>
+      <HintPath>$(HOTDS_GAME_PATH)\dyingsun_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>..\libs\UnityEngine.dll</HintPath>
+      <HintPath>$(HOTDS_GAME_PATH)\dyingsun_Data\Managed\UnityEngine.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Rewired_Core">
-      <HintPath>..\libs\Rewired_Core.dll</HintPath>
+      <HintPath>$(HOTDS_GAME_PATH)\dyingsun_Data\Managed\Rewired_Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
+
+    <!-- BepInEx and Harmony Core DLLs -->
     <Reference Include="BepInEx">
-      <HintPath>..\libs\BepInEx.dll</HintPath>
+      <HintPath>$(BEPINEX_CORE_PATH)\BepInEx.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="0Harmony">
-      <HintPath>..\libs\0Harmony.dll</HintPath>
+      <HintPath>$(BEPINEX_CORE_PATH)\0Harmony.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>

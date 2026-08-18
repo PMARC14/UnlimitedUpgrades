@@ -1,5 +1,6 @@
 $stagingDir = "$PSScriptRoot\staging"
-$outputZip = "$PSScriptRoot\pmadd-Unlimited_Upgrades-1.0.0.zip"
+$distDir = "$PSScriptRoot\dist"
+$outputZip = "$distDir\pmadd-Unlimited_Upgrades-1.0.0.zip"
 $dllSource = "$PSScriptRoot\src\bin\AllUpgradesMod.dll"
 
 Write-Host "Building project in Release mode..."
@@ -14,6 +15,10 @@ Write-Host "Creating staging directory..."
 if (Test-Path $stagingDir) { Remove-Item -Path $stagingDir -Recurse -Force }
 New-Item -ItemType Directory -Path $stagingDir -Force | Out-Null
 
+if (-not (Test-Path $distDir)) {
+    New-Item -ItemType Directory -Path $distDir -Force | Out-Null
+}
+
 Write-Host "Copying files to staging..."
 Copy-Item -Path $dllSource -Destination $stagingDir -Force
 Copy-Item -Path "$PSScriptRoot\manifest.json" -Destination $stagingDir -Force
@@ -27,4 +32,4 @@ Compress-Archive -Path "$stagingDir\*" -DestinationPath $outputZip -Force
 Write-Host "Cleaning up staging directory..."
 Remove-Item -Path $stagingDir -Recurse -Force
 
-Write-Host "Package created successfully at: $outputZip"
+Write-Host "Package created successfully in dist folder: $outputZip"
