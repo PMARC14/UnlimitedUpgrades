@@ -1,7 +1,7 @@
 # Unlimited Upgrades
 
-[![GitHub Release](https://img.shields.io/github/v/release/PMARC14/UnlimitedUpgrades?style=flat-square)](https://github.com/PMARC14/UnlimitedUpgrades/releases)
-[![Thunderstore](https://img.shields.io/badge/Thunderstore-UnlimitedUpgrades-blue?style=flat-square)](https://thunderstore.io/c/house-of-the-dying-sun/)
+[![GitHub Release](https://img.shields.io/github/v/release/PMARC14/Unlimited_Upgrades?style=flat-square)](https://github.com/PMARC14/Unlimited_Upgrades/releases)
+[![Thunderstore](https://img.shields.io/badge/Thunderstore-Unlimited__Upgrades-blue?style=flat-square)](https://thunderstore.io/c/house-of-the-dying-sun/)
 
 **Unlimited Upgrades** is a mod for *House of the Dying Sun* that removes the default 2-slot limit on player ships, allowing you to equip as many Field Upgrades (modifiers) as you want on any ship in your fleet!
 
@@ -32,25 +32,25 @@
 ### Automatic via r2modman / Thunderstore (Recommended)
 1. Install and open **[r2modman](https://thunderstore.io/c/house-of-the-dying-sun/p/ebkr/r2modman/)** or **Thunderstore Mod Manager**.
 2. Select **House of the Dying Sun** as your game.
-3. Search for **UnlimitedUpgrades** in the Online tab and click **Download**.
+3. Search for **Unlimited_Upgrades** in the Online tab and click **Download**.
 4. Launch the game using **Start Modded**.
 
 ### Manual Installation
 1. Ensure **BepInEx** is installed in your *House of the Dying Sun* directory.
-2. Download the latest release `.zip` from the [Releases](https://github.com/PMARC14/UnlimitedUpgrades/releases) page or Thunderstore.
-3. Extract `AllUpgradesMod.dll` into your `BepInEx/plugins/` directory (e.g. `BepInEx/plugins/UnlimitedUpgrades/AllUpgradesMod.dll`).
+2. Download the latest release `.zip` from the [Releases](https://github.com/PMARC14/Unlimited_Upgrades/releases) page or Thunderstore.
+3. Extract `AllUpgradesMod.dll` into your `BepInEx/plugins/` directory (e.g. `BepInEx/plugins/pmadd-Unlimited_Upgrades/AllUpgradesMod.dll`).
 4. Launch the game.
 
 ---
 
 ## Building from Source
 
-This repository is completely self-contained with the required reference assemblies.
+This repository dynamically references your local game installation or BepInEx paths.
 
 ```bash
 # Clone the repository
-git clone https://github.com/PMARC14/UnlimitedUpgrades.git
-cd UnlimitedUpgrades
+git clone https://github.com/PMARC14/Unlimited_Upgrades.git
+cd Unlimited_Upgrades
 
 # Build the Release DLL
 dotnet build src/AllUpgradesMod.csproj -c Release
