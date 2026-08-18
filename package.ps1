@@ -1,6 +1,6 @@
 $stagingDir = "$PSScriptRoot\staging"
 $distDir = "$PSScriptRoot\dist"
-$outputZip = "$distDir\pmadd-Unlimited_Upgrades-1.0.0.zip"
+$outputZip = "$distDir\pmadd-Unlimited_Upgrades-1.0.1.zip"
 $dllSource = "$PSScriptRoot\src\bin\AllUpgradesMod.dll"
 
 Write-Host "Building project in Release mode..."
