@@ -1,8 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net35</TargetFramework>
-    <AssemblyTitle>AllUpgradesMod</AssemblyTitle>
-    <Product>UnlimitedUpgrades</Product>
+    <AssemblyTitle>Unlimited Upgrades</AssemblyTitle>
+    <Product>Unlimited Upgrades</Product>
     <Version>1.0.0</Version>
     <OutputPath>bin\</OutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
