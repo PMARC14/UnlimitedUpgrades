@@ -1,0 +1,9 @@
+{
+  "name": "UnlimitedUpgrades",
+  "version_number": "1.0.0",
+  "website_url": "https://github.com/PMARC14/UnlimitedUpgrades",
+  "description": "Equip unlimited upgrades on player ships with scrollable hangar slots and toggle selection.",
+  "dependencies": [
+    "BepInEx-BepInExPack_HOTDS-5.4.1900"
+  ]
+}

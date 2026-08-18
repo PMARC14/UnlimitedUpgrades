@@ -1,0 +1,16 @@
+# Build outputs
+**/[Bb]in/
+**/[Oo]bj/
+*.user
+*.suo
+
+# Staging & Release zips (generated)
+staging/
+*.zip
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+.vs/
+.vscode/
+.idea/
